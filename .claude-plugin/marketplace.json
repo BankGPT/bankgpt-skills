@@ -1,0 +1,30 @@
+{
+  "name": "bankgpt-workflow",
+  "metadata": {
+    "description": "Official Agent Skills from BankGPT."
+  },
+  "owner": {
+    "name": "BankGPT"
+  },
+  "plugins": [
+    {
+      "name": "bankgpt-workflow",
+      "source": "./",
+      "description": "Official Agent Skills from BankGPT.",
+      "version": "0.1.0",
+      "author": {
+        "name": "BankGPT"
+      },
+      "homepage": "./",
+      "repository": "./",
+      "license": "MIT",
+      "category": "productivity",
+      "tags": [
+        "invoice",
+        "receipt",
+        "analysis",
+        "merge"
+      ]
+    }
+  ]
+}

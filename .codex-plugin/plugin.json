@@ -1,0 +1,39 @@
+{
+  "name": "bankgpt-workflow",
+  "version": "0.1.0",
+  "description": "Official Agent Skills from BankGPT.",
+  "author": {
+    "name": "BankGPT",
+    "url": "./"
+  },
+  "homepage": "./",
+  "repository": "./",
+  "license": "MIT",
+  "keywords": [
+    "invoice",
+    "receipt",
+    "table",
+    "analysis",
+    "merge"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "BankGPT Workflow",
+    "shortDescription": "Generate, scan, compare, merge, and summarize financial data.",
+    "longDescription": "Use BankGPT workflows to create invoices and receipts, extract structured data, compare files, merge datasets, and produce AI summaries.",
+    "developerName": "BankGPT",
+    "category": "Productivity",
+    "capabilities": [
+      "Read"
+    ],
+    "websiteURL": "./",
+    "privacyPolicyURL": "./",
+    "termsOfServiceURL": "./",
+    "defaultPrompt": [
+      "Generate an invoice from this source data.",
+      "Extract structured rows from this receipt PDF.",
+      "Compare these spreadsheets and summarize the differences."
+    ],
+    "brandColor": "#1A73E8"
+  }
+}

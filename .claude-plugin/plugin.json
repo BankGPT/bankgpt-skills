@@ -1,0 +1,17 @@
+{
+  "name": "bankgpt-workflow",
+  "version": "0.1.0",
+  "description": "Official Agent Skills from BankGPT.",
+  "author": {
+    "name": "BankGPT"
+  },
+  "homepage": "./",
+  "repository": "./",
+  "license": "MIT",
+  "keywords": [
+    "invoice",
+    "receipt",
+    "analysis",
+    "merge"
+  ]
+}
