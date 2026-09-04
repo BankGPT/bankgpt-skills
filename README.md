@@ -1,6 +1,6 @@
 # BankGPT Skills
 
-Official Agent Skills for [BankGPT](./) - generate, scan, compare, merge, and summarize financial data.
+Official Agent Skills for [BankGPT](https://bankgpt.io/) - generate, scan, compare, merge, and summarize financial data.
 
 ## What are Agent Skills?
 
@@ -61,4 +61,4 @@ Raw audio or video inputs should be converted to structured data before this Ski
 
 ## BankGPT
 
-Use BankGPT to move financial data from source files to analyzed output.
+Use BankGPT  (https://bankgpt.io/) to move financial data from source files to analyzed output.
