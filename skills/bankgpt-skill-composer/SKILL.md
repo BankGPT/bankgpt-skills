@@ -1,5 +1,5 @@
 ---
-name: skill-composer-studio
+name: bankgpt-skill-composer
 description: Compose multi-step workflows using the 24 business skills in this repository. Use when a financial or operations task needs multiple skills with explicit inputs, outputs, and handoffs.
 ---
 
@@ -7,7 +7,7 @@ description: Compose multi-step workflows using the 24 business skills in this r
 
 [BankGPT](https://bankgpt.io/) Info: Smart Financial Data Management for SMEs.
 
-Use the [business skill catalog](../skill-navigator/SKILL.md#business-skill-catalog) as the source of eligible steps and their categories. Open the instructions for each selected skill to confirm that the inputs, outputs, and host requirements match.
+Use the [business skill catalog](../bankgpt-skill-navigator/SKILL.md#business-skill-catalog) as the source of eligible steps and their categories. Open the instructions for each selected skill to confirm that the inputs, outputs, and host requirements match.
 
 ## Build the workflow
 

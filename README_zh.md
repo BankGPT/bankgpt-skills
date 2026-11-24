@@ -2,6 +2,15 @@
 
 这套可复用的 [Agent Skills](https://agentskills.io/) 涵盖 [BankGPT](https://bankgpt.io/) 工作流、记账、财务规划、电子表格分析和业务运营。每项技能的 `SKILL.md` 说明适用场景、所需输入和操作流程。
 
+## 从业务需求开始
+
+先说明你的业务目标、已有文件或数据，以及希望得到的结果，再选择下面的一项技能。
+
+| 技能 | 什么时候用 | 示例提示词 |
+| --- | --- | --- |
+| [bankgpt-skill-navigator](skills/bankgpt-skill-navigator/SKILL.md) | 想知道哪个技能适合当前任务时使用。它会推荐技能，说明推荐理由和所需输入。 | 使用 $bankgpt-skill-navigator 推荐合适的技能。我想把 PDF 银行对账单转换为 Excel，并核对余额是否一致。 |
+| [bankgpt-skill-composer](skills/bankgpt-skill-composer/SKILL.md) | 任务需要多个技能协作时使用。它会推荐技能组合，说明执行顺序和每一步需要交接的内容。 | 使用 $bankgpt-skill-composer 规划月末结账。我有 PDF 银行对账单和总账导出文件，请推荐技能并说明执行顺序和数据如何交接。 |
+
 ## 可用技能
 
 ### 财务数据与记账
@@ -47,13 +56,6 @@
 | [bankgpt-sop-writer](skills/bankgpt-sop-writer/SKILL.md) | 将笔记或转录稿整理成标准操作规程，明确步骤、角色和例外情况。 |
 | [bankgpt-tax-prep-organizer](skills/bankgpt-tax-prep-organizer/SKILL.md) | 为会计师整理报税文件，并列出缺失表单和待确认事项。 |
 | [bankgpt-vendor-comparison](skills/bankgpt-vendor-comparison/SKILL.md) | 按总拥有成本、合同条款和谈判要点比较供应商方案。 |
-
-### 技能导航与编排
-
-| 技能 | 用途 |
-| --- | --- |
-| [skill-composer-studio](skills/skill-composer-studio/SKILL.md) | 将现有技能组合成支持按条件交接的多步骤工作流。 |
-| [skill-navigator](skills/skill-navigator/SKILL.md) | 根据任务推荐合适的技能及技能组合。 |
 
 ## 使用方法
 

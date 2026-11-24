@@ -2,6 +2,15 @@
 
 Reusable [Agent Skills](https://agentskills.io/) for [BankGPT](https://bankgpt.io/) workflows, bookkeeping, financial planning, spreadsheet analysis, and business operations. Each skill starts with a `SKILL.md` that describes when to use it, its inputs, and its workflow.
 
+## Start with your business goal
+
+Describe your business goal, the files or data you have, and the result you need. Start with one of these skills.
+
+| Skill | When to use it | Example prompt |
+| --- | --- | --- |
+| [bankgpt-skill-navigator](skills/bankgpt-skill-navigator/SKILL.md) | Find the right skill for your task. It explains why the skill fits and what inputs it needs. | Use $bankgpt-skill-navigator to recommend a skill for converting PDF bank statements into Excel and checking that the balances reconcile. |
+| [bankgpt-skill-composer](skills/bankgpt-skill-composer/SKILL.md) | Plan a task that needs multiple skills. It recommends which skills to use, in what order, and what each step passes to the next. | Use $bankgpt-skill-composer to plan a month-end close from PDF bank statements and a ledger export. Recommend the skills and show the handoffs. |
+
 ## Available Skills
 
 ### Financial Data and Bookkeeping
@@ -47,13 +56,6 @@ Reusable [Agent Skills](https://agentskills.io/) for [BankGPT](https://bankgpt.i
 | [bankgpt-sop-writer](skills/bankgpt-sop-writer/SKILL.md) | Turn notes or transcripts into a standard operating procedure with steps, roles, and exceptions. |
 | [bankgpt-tax-prep-organizer](skills/bankgpt-tax-prep-organizer/SKILL.md) | Organize tax documents for an accountant and list missing forms and open questions. |
 | [bankgpt-vendor-comparison](skills/bankgpt-vendor-comparison/SKILL.md) | Compare vendor proposals by total cost of ownership, contract terms, and negotiation points. |
-
-### Skill Discovery and Composition
-
-| Skill | What it does |
-| --- | --- |
-| [skill-composer-studio](skills/skill-composer-studio/SKILL.md) | Combine existing skills into multi-step workflows with conditional handoffs. |
-| [skill-navigator](skills/skill-navigator/SKILL.md) | Recommend skills and skill combinations for a task. |
 
 ## Usage
 

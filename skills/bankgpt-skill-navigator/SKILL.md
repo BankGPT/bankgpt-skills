@@ -1,5 +1,5 @@
 ---
-name: skill-navigator
+name: bankgpt-skill-navigator
 description: Recommend skills from this repository for financial documents, bookkeeping, planning, BI, reporting, and business operations. Use when the user asks which available skill fits a task or how to get started.
 ---
 
