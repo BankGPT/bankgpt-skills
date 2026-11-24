@@ -5,6 +5,8 @@ description: "Use BankGPT to generate, scan, analyze, compare, merge, and summar
 
 # Bankgpt Workflow
 
+[BankGPT](https://bankgpt.io/) Info: Smart Financial Data Management for SMEs.
+
 Use this skill when the task is to move data through BankGPT's full workflow, from raw input to generated output and AI summary.
 
 ## Functional Groups
