@@ -1,0 +1,106 @@
+name: Publish skills to ClawHub
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: Preview without publishing
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - skill_path: skills/bankgpt-skill-navigator
+            categories: 'agents,productivity'
+            topics: 'skill-discovery,task-routing,workflow-recommendations'
+          - skill_path: skills/bankgpt-skill-composer
+            categories: 'agents,automation'
+            topics: 'workflow-orchestration,skill-composition,data-handoffs'
+          - skill_path: skills/bankgpt-workflow
+            categories: 'finance,productivity'
+            topics: 'financial-data,invoice-generation,document-scanning,table-comparison'
+          - skill_path: skills/bookkeeping-close
+            categories: 'finance,integrations'
+            topics: 'bookkeeping,bank-reconciliation,month-end-close'
+          - skill_path: skills/financial-parser
+            categories: 'finance,knowledge'
+            topics: 'document-extraction,expense-categorization,recurring-payments'
+          - skill_path: skills/statement-extract-and-prove
+            categories: 'finance,knowledge'
+            topics: 'bank-statements,pdf-to-excel,balance-verification'
+          - skill_path: skills/budget-optimizer
+            categories: 'finance'
+            topics: 'budgeting,expense-analysis,debt-repayment,emergency-funds'
+          - skill_path: skills/cash-flow-forecaster
+            categories: 'finance'
+            topics: 'cash-flow-forecasting,accounts-receivable,accounts-payable'
+          - skill_path: skills/financial-goal-planner
+            categories: 'finance'
+            topics: 'financial-planning,savings-goals,retirement-planning'
+          - skill_path: skills/tax-strategy-optimizer
+            categories: 'finance'
+            topics: 'us-tax-planning,roth-contributions,capital-gains,tax-deductions'
+          - skill_path: skills/trade-quote-builder
+            categories: 'finance,productivity'
+            topics: 'field-services,cost-estimation,pricing,profit-margin'
+          - skill_path: skills/bi-measure-builder
+            categories: 'productivity'
+            topics: 'business-intelligence,power-bi,dax,tableau'
+          - skill_path: skills/executive-dashboard-generator
+            categories: 'productivity'
+            topics: 'executive-reporting,dashboards,kpi-tracking,data-visualization'
+          - skill_path: skills/spreadsheet-model-auditor
+            categories: 'productivity'
+            topics: 'spreadsheet-audit,formula-validation,financial-modeling'
+          - skill_path: skills/spreadsheet-qa
+            categories: 'productivity'
+            topics: 'spreadsheet-analysis,data-quality,reproducible-analysis'
+          - skill_path: skills/bankgpt-contract-renewal-radar
+            categories: 'productivity,automation'
+            topics: 'contract-management,renewals,notice-deadlines'
+          - skill_path: skills/bankgpt-data-room-builder
+            categories: 'knowledge,productivity'
+            topics: 'virtual-data-room,due-diligence,document-management'
+          - skill_path: skills/bankgpt-deal-room
+            categories: 'finance,knowledge'
+            topics: 'deal-analysis,due-diligence,contract-review'
+          - skill_path: skills/bankgpt-expense-audit
+            categories: 'finance,integrations'
+            topics: 'expense-audit,receipt-matching,policy-compliance'
+          - skill_path: skills/bankgpt-folder-organizer
+            categories: 'productivity,automation'
+            topics: 'file-organization,deduplication,document-indexing'
+          - skill_path: skills/bankgpt-invoice-chaser
+            categories: 'finance,automation'
+            topics: 'accounts-receivable,invoice-collection,aging-report'
+          - skill_path: skills/bankgpt-qbr-builder
+            categories: 'productivity,communication'
+            topics: 'quarterly-business-review,customer-success,usage-analytics'
+          - skill_path: skills/bankgpt-rfp-response
+            categories: 'productivity,knowledge'
+            topics: 'rfp-response,proposal-writing,requirements-mapping'
+          - skill_path: skills/bankgpt-sop-writer
+            categories: 'knowledge,productivity'
+            topics: 'standard-operating-procedures,process-documentation,workflow-design'
+          - skill_path: skills/bankgpt-tax-prep-organizer
+            categories: 'finance,knowledge'
+            topics: 'tax-preparation,document-management,tax-forms'
+          - skill_path: skills/bankgpt-vendor-comparison
+            categories: 'finance,productivity'
+            topics: 'procurement,vendor-evaluation,total-cost-of-ownership'
+    uses: openclaw/clawhub/.github/workflows/skill-publish.yml@main
+    with:
+      skill_path: ${{ matrix.skill_path }}
+      dry_run: ${{ inputs.dry_run }}
+      categories: ${{ matrix.categories }}
+      topics: ${{ matrix.topics }}
+    secrets:
+      clawhub_token: ${{ secrets.CLAWHUB_TOKEN }}
